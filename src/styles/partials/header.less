@@ -1,0 +1,129 @@
+.main-header {
+  padding: 30px 0;
+  color: @white;
+  background: @blue url("../../img/bg/bg_header.jpg") no-repeat 0 0;
+  background-size: cover;
+
+  &__top-menu {
+    margin-bottom: 200px;
+  }
+
+  &__logo {
+    display: block;
+    float: left;
+    min-height: 60px;
+    padding-left: 120px;
+    font-size: 27px;
+    line-height: 60px;
+    color: @white;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: url("../../img/logo/p-logo.png") no-repeat 28px 50%;
+
+    &-left {
+      font-weight: 800;
+    }
+
+    &-right {
+      position: relative;
+      left: -5px;
+      font-weight: 300;
+    }
+  }
+
+  &__nav-container {
+    float: right;
+  }
+
+  &__nav {
+    padding-left: 0;
+    margin: 0;
+    font-size: 0;
+    list-style: none;
+
+    &-item {
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 30px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 60px;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: @white;
+      text-decoration: none;
+      .transition();
+    }
+
+    a:hover,
+    a:active {
+      color: @text-base;
+    }
+  }
+
+  &__slider {
+    padding-left: 35%;
+    padding-right: 18.43%;
+
+    &-title {
+      .this-h1();
+      margin-bottom: 35px;
+      color: @white;
+
+      &::after {
+        background-color: @white;
+      }
+    }
+
+    &-description {
+      margin-bottom: 165px;
+      font-size: @p;
+      font-weight: 400;
+      line-height: 1.295em;
+    }
+
+    &-pagination {
+      padding-left: 80px;
+      font-size: 0;
+
+      span {
+        display: inline-block;
+        vertical-align: baseline;
+        border: 3px solid @white;
+        margin-right: 10px;
+        font-size: @p - 1;
+        font-weight: 800;
+        line-height: 35px;
+        .transition();
+
+        &:hover {
+          cursor: pointer;
+          color: @text-base;
+          border-color: @text-base;
+        }
+      }
+
+      span:last-child {
+        margin-right: 0;
+      }
+
+      .number {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+      }
+
+      .prev,
+      .next {
+        padding: 0 7px;
+      }
+
+      .current {
+        color: @text-base;
+        border-color: @text-base;
+      }
+    }
+  }
+}

@@ -10,13 +10,17 @@
   }
 }
 
+.clearfix {
+  .clearfix();
+}
+
 /* Default smooth transition effect */
 .transition() {
   transition: all 0.2s linear;
 }
 
 /* Button Mixin */
-.button-variant(@color, @background, @border) {
+.button-variant(@color; @background; @border) {
   color: @color;
   background-color: @background;
   border-color: @border;
@@ -53,35 +57,35 @@
 
 /* CSS triangles Mixin */
 .triangle(@_; @size; @color) {
-    width: 0;
-    height: 0;
-    border-width: @size;
-    border-style: solid;
-    border-color: @color;
+  width: 0;
+  height: 0;
+  border-width: @size;
+  border-style: solid;
+  border-color: @color;
 }
 
 .triangle(top; @size; @color) {
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-top-style: none;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-style: none;
 }
 
 .triangle(right; @size; @color) {
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    border-right-style: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-style: none;
 }
 
 .triangle(bottom; @size; @color) {
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-bottom-style: none;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-style: none;
 }
 
 .triangle(left; @size; @color) {
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    border-left-style: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-style: none;
 }
 
 // Hamburger Settings
@@ -155,10 +159,12 @@
 }
 
 /* h1, according to template */
-.this-h1(@left-padding:75px; @color:@text-base) {
+.index-h1(@left-padding:75px; @color:@text-base) {
   position: relative;
   padding-left: @left-padding;
   padding-bottom: 37px;
+  margin-top: 0;
+  margin-bottom: 45px;
   color: @color;
   font-size: @h1;
   text-transform: uppercase;
@@ -173,4 +179,8 @@
     height: 10px;
     background-color: @text-base;
   }
+}
+
+.index-h1 {
+  .index-h1();
 }

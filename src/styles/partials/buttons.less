@@ -1,0 +1,38 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 4px 8px;
+  border-width: 3px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  .transition();
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &&--default {
+    color: @blue;
+    border-color: @blue;
+    background-color: transparent;
+
+    &:hover {
+      color: @white;
+      border-color: @blue;
+      background-color: @blue;
+    }
+
+    &.active {
+      color: @white;
+      border-color: @text-base;
+      background-color: @text-base;
+    }
+  }
+}

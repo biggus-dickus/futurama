@@ -33,17 +33,6 @@
 	padding-left: 0;
 	font-size: 0;
 
-	&&--flex-mobile {
-		@media @mobile {
-			position: relative;
-			width: 750px;
-			left: -70px;
-			display: flex;
-			align-items: flex-end;
-			flex-wrap: wrap;
-		}
-	}
-
 	&__item {
 		display: inline-block;
 		vertical-align: middle;
@@ -52,10 +41,14 @@
 	&__item&__item--vab {
 		vertical-align: bottom;
 	}
-}
 
-.clearfix {
-	.clearfix();
+	&__item&__item--vabl {
+		vertical-align: baseline;
+	}
+
+	&__item&__item--vat {
+		vertical-align: top;
+	}
 }
 
 .font-light {

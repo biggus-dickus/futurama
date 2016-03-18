@@ -8,11 +8,17 @@ html {
 *:after {box-sizing: inherit;}
 
 body {
-  min-width: 830px;
+  min-width: @body-min-width;
   color: @text-base;
+  scroll-behavior: smooth;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+p {
+  font-size: @p;
+  line-height: 1.47em;
 }

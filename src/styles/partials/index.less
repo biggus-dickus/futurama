@@ -1,4 +1,5 @@
-.index-section {
+.index-section,
+.page-footer {
   padding-top: 200px;
 
   &__caption {
@@ -7,8 +8,7 @@
   }
 
   &__main-description {
-    font-size: @p;
-    line-height: 1.47em;
+    &:extend(p);
   }
 
   &__post-title {
@@ -20,8 +20,7 @@
   }
 
   &__post-text {
-    font-size: @p;
-    line-height: 1.47em;
+    &:extend(p);
   }
 }
 
@@ -66,6 +65,72 @@
   }
 }
 
+.about {
+
+  &__post {
+    &:extend(.clearfix all);
+
+    &-pic {
+      float: left;
+      width: 50%;
+      margin-right: 40px;
+      margin-bottom: 30px;
+    }
+
+    &-text {
+      padding: 0 19.5%;
+    }
+
+    &-text&-text--padd-left {
+      &:extend(.clearfix all);
+      padding-left: 19.5%;
+      padding-right: 0;
+    }
+
+    &-text&-text--padd-left p:first-of-type {
+      margin-top: 0;
+    }
+
+    &-title {
+      margin-top: 0;
+      margin-bottom: 1.12em;
+      font-size: @h2;
+      font-weight: 400;
+      line-height: 1em;
+      text-transform: uppercase;
+
+      &&--extrabold {
+        display: block;
+        font-weight: 800;
+        line-height: 1.35em;
+      }
+    }
+
+    &-buttons {
+      margin-bottom: 40px;
+      white-space: nowrap;
+    }
+
+    &-figure {
+      float: right;
+      width: 63%;
+      margin: 20px 0 0 45px;
+
+      & figcaption {
+        margin-bottom: 1.67em;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.4em;
+        text-transform: uppercase;
+      }
+    }
+
+    &-fig-image {
+      width: 100%;
+    }
+  }
+}
+
 .blog {
 
   &__post-info {
@@ -74,20 +139,52 @@
   }
 }
 
-
-
 .contacts {
 
   &__map {
     float: left;
     width: 50%;
     height: 540px;
-    background-color: bisque;
+    background-color: #F0EDE5;
   }
 
   &__details-section {
     float: left;
     width: 50%;
     padding-left: 40px;
+  }
+
+  &__inner {
+    max-width: 360px;
+  }
+
+  &__title {
+    &:extend(p);
+    margin-top: 0;
+    margin-bottom: 1.18em;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 2em;
+  }
+
+  &__wrapper {
+    &:extend(p);
+    margin-bottom: 2.4em;
+  }
+
+  &__item {
+    display: block;
+
+    & a {
+      color: @text-base;
+      text-decoration: none;
+      .transition();
+    }
+
+    & a:hover {
+      color: @blue;
+    }
   }
 }

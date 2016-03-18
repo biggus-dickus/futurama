@@ -1,6 +1,10 @@
 /* Paths */
 @fonts-path: "../../fonts/open-sans";
 
+/* Dimensions */
+@body-min-width: 830px;
+@screen--lg: 1300px;
+
 /* Colors */
 @black: #000000;
 @white: #ffffff;
@@ -10,16 +14,13 @@
 
 /* Typography */
 @h1: 41px;
+@h2: 33px;
 @h3: 19px;
 @p: 17px;
 
-/* Sizes */
-@screen--lg: 1300px;
-
 /* Viewports */
-@mobile: ~"only screen and (max-width: 999px)";
-@resize: ~"only screen and (min-width: 1000px) and (max-width: 1199px)";
-@desktop: ~"only screen and (min-width: 1300px)";
+@mobile: ~"only screen and (max-width: @body-min-width)";
+@desktop: ~"only screen and (min-width: @screen-lg)";
 @retina2x: ~"(min-resolution: 2dppx)";
 @retina3x: ~"(min-resolution: 3dppx)";
 

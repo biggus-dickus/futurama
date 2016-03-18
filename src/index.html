@@ -246,22 +246,30 @@
       <img class="about__post-pic" width="650" height="409" src="img/posts/post_11.jpg" alt="My Photo">
       <div class="about__post-text">
         <h2 class="about__post-title">
-          Bender Bending <strong class="about__post-title  about__post-title--extrabold">Rodriguez</strong>
+          Bender Bending
+          <strong class="about__post-title  about__post-title--extrabold">
+            Rodriguez
+          </strong>
         </h2>
-        <a class="btn btn--default" href="#">Facebook</a>
-        <a class="btn btn--default" href="#">Google+</a>
-        <a class="btn btn--default" href="#">Twitter</a>
+        <div class="about__post-buttons">
+          <a class="btn btn--default" href="#">Facebook</a>
+          <a class="btn btn--default" href="#">Google+</a>
+          <a class="btn btn--default" href="#">Twitter</a>
+        </div>
+        <p>Cras et&nbsp;diam venenatis, vulputate sapien vitae, iaculis nulla. Donec et&nbsp;metus efficitur, vestibulum purus non, sodales urna. Fusce id&nbsp;rhoncus nisi. In&nbsp;sagittis feugiat convallis. Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus&nbsp;ac, blandit finibus&nbsp;mi.</p>
+        <p>Curabitur nisi neque, eleifend in&nbsp;fermentum quis, lacinia ut&nbsp;nisl. Donec vel iaculis turpis, eu&nbsp;feugiat urna. Sed urna elit, sollicitudin non euismod sit amet, volutpat ac&nbsp;nulla. </p>
+        <p>Quisque consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac&nbsp;pulvinar nulla velit eget elit. Vivamus maximus, leo nec vestibulum fringilla, lacus lectus mollis est, in&nbsp;imperdiet turpis lectus id&nbsp;mi. Morbi turpis eros, condimentum in&nbsp;magna vel, finibus varius velit. Donec pharetra magna in&nbsp;metus pretium, ac&nbsp;porttitor metus viverra. Etiam turpis nibh, euismod ac&nbsp;ligula&nbsp;at.</p>
       </div>
-      <p>Cras et&nbsp;diam venenatis, vulputate sapien vitae, iaculis nulla. Donec et&nbsp;metus efficitur, vestibulum purus non, sodales urna. Fusce id&nbsp;rhoncus nisi. In&nbsp;sagittis feugiat convallis. Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus&nbsp;ac, blandit finibus&nbsp;mi.</p>
-      <p>Curabitur nisi neque, eleifend in&nbsp;fermentum quis, lacinia ut&nbsp;nisl. Donec vel iaculis turpis, eu&nbsp;feugiat urna. Sed urna elit, sollicitudin non euismod sit amet, volutpat ac&nbsp;nulla. </p>
-      <p>Quisque consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac&nbsp;pulvinar nulla velit eget elit. Vivamus maximus, leo nec vestibulum fringilla, lacus lectus mollis est, in&nbsp;imperdiet turpis lectus id&nbsp;mi. Morbi turpis eros, condimentum in&nbsp;magna vel, finibus varius velit. Donec pharetra magna in&nbsp;metus pretium, ac&nbsp;porttitor metus viverra. Etiam turpis nibh, euismod ac&nbsp;ligula&nbsp;at.</p>
-      <p>Donec et&nbsp;metus efficitur, vestibulum purus non, sodales urna. Fusce id&nbsp;rhoncus nisi. In&nbsp;sagittis feugiat convallis.</p>
-      <p>Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus&nbsp;ac, blandit finibus&nbsp;mi. Curabitur nisi neque, eleifend in&nbsp;fermentum quis, lacinia ut&nbsp;nisl.</p>
 
-      <figure class="about__post-figure">
-        <figcaption>Skills</figcaption>
-        <img width="650" height="186" src="img/posts/skills.png" alt="My Skills">
-      </figure>
+      <!-- Text with image flushed to right -->
+      <div class="about__post-text  about__post-text--padd-left">
+        <figure class="about__post-figure">
+          <figcaption>Skills</figcaption>
+          <img class="about__post-fig-image" width="650" height="186" src="img/posts/skills.png" alt="My Skills">
+        </figure>
+        <p>Donec et&nbsp;metus efficitur, vestibulum purus non, sodales urna. Fusce id&nbsp;rhoncus nisi. In&nbsp;sagittis feugiat convallis.</p>
+        <p>Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus&nbsp;ac, blandit finibus&nbsp;mi. Curabitur nisi neque, eleifend in&nbsp;fermentum quis, lacinia ut&nbsp;nisl.</p>
+      </div>
     </div>
   </section>
 
@@ -390,17 +398,17 @@
 
     <div class="clearfix">
       <div class="contacts__map">
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6090.318179043849!2d20.042387899708118!3d50.07386583322905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716450c61fd341b%3A0x7f2d9cec1f7328d7!2zYWxlamEgU29saWRhcm5vxZtjaSwgS3Jha8Ozdywg0J_QvtC70YzRiNCw!5e0!3m2!1sru!2sua!4v1458318092002" width="100%" height="540" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="contacts__details-section">
-        <div class="contacts__address">
+        <div class="contacts__inner">
           <h3 class="contacts__title">Address</h3>
           <p class="contacts__text">
-            ul. Lorem Street 123<br>
-            31-970 Kraków<br>
-            Polska
-          </p>
-          <p class="contacts__text">
+            ul. Lorem Street 123
+            <br>
+            31-970 Kraków
+            <br>Polska</p>
+          <p class="contacts__wrapper">
             <span class="contacts__item">
               Email: <b><a href="mailto:sample@mail.com">sample@mail.com</a></b>
             </span>
@@ -408,32 +416,35 @@
               Phone: <b>+49 5241 80-0 00</b>
             </span>
             <span class="contacts__item">
-              Mobile: <b>+49 5241 80-0 00</b>
+              Mobile:
+              <b>+49 5241 80-0 00</b>
             </span>
             <span class="contacts__item">
-              Facebook: <b><a href="#">facebook.com/username</a></b>
+              Facebook:
+              <b><a href="#">facebook.com/username</a></b>
             </span>
             <span class="contacts__item">
-              Zwitter: <b><a href="#">zwitter.com/username</a></b>
+              Zwitter:
+              <b>
+                <a href="#">zwitter.com/username</a>
+              </b>
             </span>
           </p>
-        </div>
 
-        <form class="contacts__form" action="?" method="post">
-          <div class="formgroup">
-            <label class="form-label" for="name">Name</label>
-            <input type="text" id="name" name="name">
-          </div>
-          <div class="formgroup">
-            <label class="form-label" for="email">Email</label>
-            <input type="email" id="email" name="email">
-          </div>
-          <div class="formgroup">
-            <label class="form-label" for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          </div>
-          <input type="submit" class="btn btn--default" value="Send">
-        </form>
+          <form class="contacts-form" action="?" method="post">
+            <div class="formgroup">
+              <label class="form-label" for="name">Name</label>
+              <input class="contacts-form__field" type="text" id="name" name="name"></div>
+            <div class="formgroup">
+              <label class="form-label" for="email">Email</label>
+              <input class="contacts-form__field" type="email" id="email" name="email"></div>
+            <div class="formgroup">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="contacts-form__textarea" name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <input type="submit" class="btn btn--default" value="Send">
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -441,27 +452,29 @@
 
   <!-- FOOTER -->
   <footer class="page-footer">
-    <nav class="footer-nav">
-      <ul class="main-nav">
-        <li class="main-nav__item">
-          <a href="/">Home</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#">Service</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#">Works</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#">About Me</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="page-footer__copyright">
-      &#0169; <b>PLANET</b>EXPRESS All rights reserved
+    <div class="container">
+      <nav class="footer-nav__container  clearfix">
+        <ul class="footer-nav">
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="/">Home</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="#">Service</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="#">Works</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="#">About Me</a>
+          </li>
+          <li class="footer-nav__item  active">
+            <a class="footer-nav__link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-footer__copyright">
+        &#0169; 2015 <b>PLANET</b>EXPRESS All rights reserved
+      </div>
     </div>
   </footer>
 

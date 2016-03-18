@@ -66,3 +66,51 @@
     }
   }
 }
+
+.footer-nav {
+  float: right;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0;
+  list-style: none;
+
+  &__container {
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: baseline;
+    padding-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  &__item.active {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 46px;
+      height: 6px;
+      background-color: @text-base;
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.69em;
+    color: @text-base;
+    text-transform: uppercase;
+    text-decoration: none;
+    .transition();
+
+    &:hover {
+      color: @blue;
+    }
+  }
+}

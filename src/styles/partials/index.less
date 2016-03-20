@@ -24,16 +24,37 @@
   }
 }
 
+/* Chessboard with inline-blocks */
 .chessboard {
   font-size: 0;
+  display: table;
+  width: 100%;
 
   &__item {
-    &:extend(.clearfix all);
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     width: 50%;
   }
 
+  &__item&__item--gallery {
+    max-width: @gallery-image-width;
+    .transition();
+
+    &:hover {
+      background-color: @blue;
+    }
+    
+    &:hover .gallery__image {
+      opacity: 0.088;
+      cursor: pointer;
+    }
+
+    &:hover .gallery__overlay {
+      visibility: visible;
+    }
+  }
+  
   &__text-item {
     max-width: 400px;
 
@@ -48,9 +69,48 @@
   }
 }
 
-.services__image,
-.gallery__image,
-.blog__image {width: 100%;}
+/* Chessboard with table-cells (for hover effect) */
+.chessboard {
+  
+  &__table-cell {
+    position: relative;
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    .transition();
+  }
+
+  &__image {
+    width: 100%;
+    .transition();
+  }
+
+  &__btn {
+    position: absolute;
+    right: 7.69%;
+    bottom: 7.69%;
+    visibility: hidden;
+    .transition();
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:hover &__table-cell {
+    color: @white;
+    background-color: @blue;
+    cursor: pointer;
+  }
+
+  &:hover &__image {
+    opacity: 0.088;
+  }
+
+  &:hover &__btn {
+    visibility: visible;
+  }
+}
 
 .gallery {
 
@@ -62,6 +122,31 @@
 
   &__image {
     width: 100%;
+    .transition();
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 12.5%;
+    color: @white;
+    text-align: center;
+    cursor: pointer;
+    visibility: hidden;
+
+    &-header {
+      font-size: @h3;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      font-size: ceil(0.88 * @p);
+      font-weight: 400;
+      line-height: 1.33em;
+    }
   }
 }
 
